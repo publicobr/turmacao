@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Painel colaborativo para organizar encontros da Turma Cão." />
+  <title>Turma Cão — Encontros</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="additions.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Turma Cão — início"><span>TC</span> Turma Cão</a>
+    <nav><a href="#agenda">Agenda</a><a href="#pessoas">Pessoas</a><a href="#como-editar">Como atualizar</a></nav>
+  </header>
+
+  <main id="inicio">
+    <section class="intro">
+      <div>
+        <p class="eyebrow">PLANEJAMENTO DA TURMA · ATÉ 2027</p>
+        <h1>Quando a turma<br><em>se encontra?</em></h1>
+        <p class="lead">Veja quem estará em terra, encontre colegas por cidade e descubra as melhores janelas para encontros — dos cafés improvisados ao grande reencontro em Fortaleza.</p>
+      </div>
+      <div class="fortaleza-card">
+        <p>DESTINO EM COMUM</p><strong>Fortaleza</strong><span>Todos conseguem chegar em uma data especial até 2027.</span>
+        <button id="fortalezaFilter">Ver quem já mora em Fortaleza <b>→</b></button>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Resumo">
+      <article><span id="totalPeople">38</span><p>pessoas na turma</p></article>
+      <article><span id="onLandCount">—</span><p>em terra na data</p></article>
+      <article><span id="cityCount">—</span><p>cidades mapeadas</p></article>
+      <article class="date-picker"><label for="referenceDate">CONSULTAR DATA</label><input id="referenceDate" type="date" /></article>
+    </section>
+
+    <section id="agenda" class="section">
+      <div class="section-title"><div><p class="eyebrow">PRÓXIMAS OPORTUNIDADES</p><h2>Janelas de encontro</h2></div><p>Com base nas escalas conhecidas. Datas sem ano foram consideradas em 2026.</p></div>
+      <div id="opportunities" class="opportunities"></div>
+    </section>
+
+    <section id="pessoas" class="section people-section">
+      <div class="section-title"><div><p class="eyebrow">MAPA DA TURMA</p><h2>Onde está todo mundo</h2></div><p id="resultCount"></p></div>
+      <div class="filters">
+        <label class="search"><span>⌕</span><input id="searchInput" type="search" placeholder="Buscar nome ou cidade..." /></label>
+        <select id="cityFilter" aria-label="Filtrar por cidade"><option value="">Todas as cidades</option></select>
+        <select id="statusFilter" aria-label="Filtrar por situação"><option value="">Qualquer situação</option><option value="land">Em terra na data</option><option value="known">Escala conhecida</option><option value="unknown">Dados incompletos</option></select>
+        <button id="clearFilters" class="ghost">Limpar</button>
+      </div>
+      <div id="peopleGrid" class="people-grid"></div>
+      <div id="emptyState" class="empty" hidden>Ninguém encontrado com esses filtros.</div>
+    </section>
+
+    <section id="como-editar" class="edit-section">
+      <div><p class="eyebrow">AJUDE A COMPLETAR A TURMA</p><h2>Está faltando você ou alguma informação?</h2><p>Você que é da turma e não está em contato nos grupos, nos ajude a nos encontrar e viabilizar nossos encontros. Basta adicionar mais informações aqui, de qualquer jeito, que a gente atualiza!</p></div>
+      <form id="chatForm" class="chat-form">
+        <label for="chatMessage">Escreva nome, cidade, escala, datas ou o que souber:</label>
+        <textarea id="chatMessage" required placeholder="Ex.: Sou o Fulano, moro em Belém, trabalho em escala 28x28 e desembarco dia 15/10..."></textarea>
+        <button type="submit">Enviar <span>→</span></button>
+      </form>
+    </section>
+  </main>
+  <footer><span>Turma Cão · Em atualização</span><span>Dados visíveis apenas para quem tiver o link, conforme a hospedagem escolhida.</span></footer>
+  <script src="data.js"></script><script src="script.js"></script>
+</body>
+</html>
