@@ -46,7 +46,7 @@ const turma = [
   {nomeGuerra:"Robert",nome:"Robert",cidades:["Fortaleza"],escala:"",embarque:"",desembarque:""},
   {nomeGuerra:"Saran",nome:"Diego Saran",cidades:["Belém"],escala:"",embarque:"",desembarque:""},
   {nomeGuerra:"Saulo",nome:"Saulo",cidades:["Coimbra","Recife"],escala:"28x28",embarque:"2026-10-09",desembarque:"2026-11-06"},
-  {nomeGuerra:"Severino",nome:"Severino Cidvirino Neto Efomm",cidades:[],escala:"",embarque:"",desembarque:""},
+  {nomeGuerra:"Severino",nome:"Severino Cidvirino Neto Efomm",cidades:[],escala:"90x90",embarque:"",desembarque:"2026-09-04"},
   {nomeGuerra:"Viana",nome:"Viana",cidades:["Belém"],escala:"",embarque:"",desembarque:""},
   {nomeGuerra:"Vinente",nome:"Jefferson Vinente",cidades:["Belém"],escala:"",embarque:"",desembarque:""},
   {nomeGuerra:"Vieira",nome:"Rodrigo Vieira",cidades:["Belém"],escala:"",embarque:"",desembarque:""},
